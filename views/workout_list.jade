@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  dl
+    each workout in workout_list
+      dt #{workout.date}
+      each exercise in workout.exercises
+        dd Exercise: #{exercise.exercise_name}
+        dd Weight: #{exercise.weight} lbs
+        dd RPE: #{exercise.rpe}
